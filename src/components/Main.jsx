@@ -1,10 +1,16 @@
 import Form from "./Form";
 import SelectProject from "./SelectProject";
 import { useProject } from "./../context";
+import ProjectDetails from "./ProjectDetails";
 const Main = () => {
-  const { cancel } = useProject();
+  const { cancel, detail, showDetail } = useProject();
 
-  return <>{cancel ? <SelectProject /> : <Form />}</>;
+  return (
+    <>
+      {!showDetail && <>{cancel ? <SelectProject /> : <Form />}</>}
+      {showDetail && <ProjectDetails detail={detail} />}
+    </>
+  );
 };
 
 export default Main;

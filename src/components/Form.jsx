@@ -26,6 +26,7 @@ const Form = () => {
               name="title"
               value={formData.title}
               onChange={changeHandler}
+              required
               className="border bg-[#e1dfdd] border-b-2 border-gray-500 outline-none w-full p-1"
             />
           </div>
@@ -38,6 +39,7 @@ const Form = () => {
               name="description"
               value={formData.description}
               onChange={changeHandler}
+              required
               className="border title='description'   bg-[#e1dfdd] border-b-2 border-gray-500 outline-none w-full p-2"
             />
           </div>
@@ -50,6 +52,7 @@ const Form = () => {
               name="date"
               value={formData.date}
               onChange={changeHandler}
+              required
               className="border-bottom bg-[#e1dfdd] border-b-2 border-gray-500 outline-none w-full p-1"
             />
           </div>

@@ -1,6 +1,7 @@
 import { GiNotebook } from "react-icons/gi";
-
+import { useProject } from "../context";
 const SelectProject = () => {
+  const { createNewProjectHandler } = useProject();
   return (
     <div className="flex flex-col justify-center items-center w-full  gap-5">
       <GiNotebook size={100} color="#382a10" />
@@ -8,7 +9,10 @@ const SelectProject = () => {
       <p className="text-[#949494]">
         Select a project or get started with a new one
       </p>
-      <button className="bg-[#322e2a] text-gray-300 p-2 rounded">
+      <button
+        onClick={createNewProjectHandler}
+        className="bg-[#322e2a] text-gray-300 p-2 rounded"
+      >
         Create new project
       </button>
     </div>

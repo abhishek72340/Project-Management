@@ -21,9 +21,9 @@ const Sidebar = () => {
               <div
                 key={index}
                 className="text-[#5f5b57] cursor-pointer hover:bg-[#1c1816] w-40 p-1  hover:text-white"
-                onClick={() => projectDetailHandler(index)}
+                onClick={() => projectDetailHandler(data.id)}
               >
-                {data.title}
+                {data?.title}
               </div>
             );
           })}
